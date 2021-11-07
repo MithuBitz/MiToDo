@@ -1,6 +1,14 @@
 package com.example.to_do.data.models
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
+import com.example.to_do.utils.Constant.DATABASE_TABLE
 
-@Entity
-data class TodoTask()
+@Entity(tableName = DATABASE_TABLE)
+data class TodoTask(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
+    val titile: String,
+    val description: String,
+    val priority: Priority
+)
