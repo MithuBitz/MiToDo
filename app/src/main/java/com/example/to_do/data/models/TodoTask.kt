@@ -8,7 +8,7 @@ import com.example.to_do.utils.Constant.DATABASE_TABLE
 data class TodoTask(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-    val titile: String,
+    val title: String,
     val description: String,
     val priority: Priority
 )
